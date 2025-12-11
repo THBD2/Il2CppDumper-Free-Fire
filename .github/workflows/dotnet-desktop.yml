@@ -95,5 +95,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Il2CppDumper_EXE
-        path: Il2CppDumper\bin\Release\net8.0\Il2CppDumper.exe
+        path: Il2CppDumper\Il2CppDumper.exe
 
