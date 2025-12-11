@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Il2CppDumper_Build
-        path: 'Il2CppDumper/Dumper.exe'
+        path: 'Il2CppDumper/bin/Release/net8.0/Il2CppDumper.exe'
