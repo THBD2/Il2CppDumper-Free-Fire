@@ -78,11 +78,14 @@ jobs:
     - name: Execute unit tests
       run: dotnet test
 
-    # Restore the application to populate the obj folder with RuntimeIdentifiers
+        # Restore dependencies
     - name: Restore the application
-      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
-      env:
-        Configuration: ${{ matrix.configuration }}
+      run: dotnet restore $env:Solution_Name
+
+    # Build application
+    - name: Build the application
+      run: dotnet build $env:Solution_Name --configuration ${{ matrix.configuration }} --no-restore
+
 
     
 
